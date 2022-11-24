@@ -1,0 +1,63 @@
+<div class="container pt-5 pb-5">
+  <form [formGroup]="formGroup" (submit)="send()">
+
+    <!-- Id -->
+    <div class="form-group">
+      <label for="exampleInputEmail1">Identificacion</label>
+      <input
+        type="text"
+        class="form-control"
+        id="id"
+        placeholder="Inserte Su Identificacion"
+        formControlName="id"
+      />
+    </div>
+
+    <!-- Nombre -->
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Inserte Su Nombre"
+        formControlName="name"
+      />
+    </div>
+    <!-- Telefono -->
+    <div class="form-group">
+      <label for="exampleInputPassword1">Telefono</label>
+      <input
+        type="text"
+        class="form-control"
+        id="number"
+        placeholder="Inserte Su Telefono"
+        formControlName="number"
+      />
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="exampleInputPassword1">Email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        placeholder="Inserte Su Email"
+        formControlName="email"
+      />
+    </div>
+
+    <div class="pt-3">
+      <button
+        type="button"
+        class="btn"
+        [disabled]="formGroup.invalid"
+        [routerLink]="['/']"
+        (click)="send()"
+      >
+        Enviar
+      </button>
+    </div>
+  </form>
+</div>
