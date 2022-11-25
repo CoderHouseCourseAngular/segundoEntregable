@@ -25,6 +25,7 @@
             <th scope="col">Nombre</th>
             <th scope="col">Telefono</th>
             <th scope="col">Correo</th>
+            <th scope="col">Genero</th>
             <th scope="col"></th>
           </tr>
         </thead>
@@ -34,6 +35,7 @@
             <td>{{ user.name }}</td>
             <td>{{ user.number }}</td>
             <td>{{ user.email }}</td>
+            <td [style.color]="user.genre === 'Masculino'?'red':'blue'">{{ user.genre }}</td>
             <td class="text-center">
               <button
                 type="button"

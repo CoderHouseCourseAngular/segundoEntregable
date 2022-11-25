@@ -57,24 +57,28 @@ export class HomePageComponent implements OnInit {
       name: 'Juan',
       number: '123456',
       email: 'juan@gmail.com',
+      genre: 'Masculino',
     };
     const user2 = {
       id: '333333',
-      name: 'Felipe',
+      name: 'Laura',
       number: '654321',
-      email: 'felipe@gmail.com',
+      email: 'Laura@gmail.com',
+      genre: 'Femenino',
     };
     const user3 = {
       id: '54321',
       name: 'Miguel',
       number: '987654',
       email: 'miguel@gmail.com',
+      genre: 'Masculino',
     };
     const user4 = {
       id: '987654',
       name: 'Luis',
       number: '456789',
       email: 'luis@gmail.com',
+      genre: 'Masculino',
     };
 
     let userDB = JSON.parse(localStorage.getItem('usuarios')!);

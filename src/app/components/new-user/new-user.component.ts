@@ -20,11 +20,12 @@ export class NewUserComponent implements OnInit {
       name: ['', [Validators.required]],
       number: ['', [Validators.required]],
       email: ['', [Validators.required]],
+      genre: ['', [Validators.required]],
     });
   }
 
   send() {
-    var userDB = JSON.parse(localStorage.getItem('usuarios')!);
+    let userDB = JSON.parse(localStorage.getItem('usuarios')!);
 
     if (localStorage.getItem('usuarios')) {
       this.listaUsuarios = userDB;
@@ -35,7 +36,10 @@ export class NewUserComponent implements OnInit {
       name: this.formGroup.get('name')!.value,
       number: this.formGroup.get('number')!.value,
       email: this.formGroup.get('email')!.value,
+      genre: this.formGroup.get('genre')!.value,
     };
+
+    console.log(user.genre);
 
     this.listaUsuarios.push(user);
     console.log(user);
