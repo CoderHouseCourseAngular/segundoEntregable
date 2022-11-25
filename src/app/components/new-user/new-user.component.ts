@@ -39,8 +39,6 @@ export class NewUserComponent implements OnInit {
       genre: this.formGroup.get('genre')!.value,
     };
 
-    console.log(user.genre);
-
     this.listaUsuarios.push(user);
     console.log(user);
     localStorage.setItem('usuarios', JSON.stringify(this.listaUsuarios));
